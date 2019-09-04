@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "drag-element-example": {
+    "angular-drag-element-example": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,19 +13,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/drag-element-example",
+            "outputPath": "angular-dist/angular-drag-element-example",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": false,
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -63,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "drag-element-example:build"
+            "browserTarget": "angular-drag-element-example:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "drag-element-example:build:production"
+              "browserTarget": "angular-drag-element-example:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "drag-element-example:build"
+            "browserTarget": "angular-drag-element-example:build"
           }
         },
         "test": {
@@ -84,13 +79,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.css"],
             "scripts": []
           }
         },
@@ -102,24 +92,23 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "drag-element-example:serve"
+            "devServerTarget": "angular-drag-element-example:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "drag-element-example:serve:production"
+              "devServerTarget": "angular-drag-element-example:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "drag-element-example"
+    }
+  },
+  "defaultProject": "angular-drag-element-examplee"
 }
